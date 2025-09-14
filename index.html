@@ -15,9 +15,7 @@
             <!-- Profile Section -->
             <div class="profile">
                 <div class="profile-image">
-                    <div class="profile-placeholder">
-                        <i class="fas fa-user"></i>
-                    </div>
+                    <img src="images/P9290015.jpeg" alt="Thanaboon Thongprada" class="profile-img">
                 </div>
                 <h2 class="profile-name">Thanaboon Thongprada</h2>
                 <p class="profile-title">Computer Science Student</p>
@@ -103,14 +101,30 @@
                     </p>
                     <div class="hero-buttons">
                         <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        <button onclick="openResumeModal()" class="btn btn-resume">
+                            <i class="fas fa-route"></i>
+                            View Resume
+                        </button>
                     </div>
                 </div>
                 <div class="hero-visual">
                     <div class="hero-shapes">
-                        <div class="shape shape-1"></div>
-                        <div class="shape shape-2"></div>
-                        <div class="shape shape-3"></div>
+                        <div class="shape shape-1">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="shape shape-2">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="shape shape-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="floating-icons">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js-square"></i>
+                            <i class="fab fa-python"></i>
+                            <i class="fab fa-java"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -183,7 +197,7 @@
         <section id="resume" class="section">
             <div class="section-header">
                 <h2 class="section-title">Resume</h2>
-                <p class="section-subtitle">My professional journey</p>
+                <p class="section-subtitle">My professional background and experience</p>
             </div>
             <div class="resume-content">
                 <div class="resume-section">
@@ -239,9 +253,9 @@
             </div>
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="app">App</button>
+                <button class="filter-btn" data-filter="web">Web & App</button>
                 <button class="filter-btn" data-filter="data">Data Science</button>
+                <button class="filter-btn" data-filter="documents">Documents</button>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="data">
@@ -249,13 +263,13 @@
                         <div class="portfolio-placeholder">
                             <i class="fas fa-robot"></i>
                         </div>
+                        <div class="portfolio-hover-image">
+                            <img src="images/Work1.png" alt="Object Detection for Waste Separation" loading="lazy">
+                        </div>
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
                                 <a href="#" class="portfolio-link">
                                     <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="portfolio-link">
-                                    <i class="fas fa-search-plus"></i>
                                 </a>
                             </div>
                         </div>
@@ -266,21 +280,18 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="web">
+                <div class="portfolio-item" data-category="data">
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
                             <i class="fas fa-network-wired"></i>
                         </div>
                         <div class="portfolio-hover-image">
-                            <img src="images/Work3.png" alt="Network Security Design" loading="lazy">
+                            <img src="images/Work2.png" alt="Network Security Design" loading="lazy">
                         </div>
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
                                 <a href="#" class="portfolio-link">
                                     <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="portfolio-link">
-                                    <i class="fas fa-search-plus"></i>
                                 </a>
                             </div>
                         </div>
@@ -291,21 +302,18 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="app">
+                <div class="portfolio-item" data-category="web">
                     <div class="portfolio-image">
                         <div class="portfolio-placeholder">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="portfolio-hover-image">
-                            <img src="images/Work1.png" alt="BUEmail System" loading="lazy">
+                            <img src="images/Work3.png" alt="BUEmail System" loading="lazy">
                         </div>
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
                                 <a href="#" class="portfolio-link">
                                     <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="portfolio-link">
-                                    <i class="fas fa-search-plus"></i>
                                 </a>
                             </div>
                         </div>
@@ -322,15 +330,12 @@
                             <i class="fas fa-coffee"></i>
                         </div>
                         <div class="portfolio-hover-image">
-                            <img src="images/Work2.png" alt="Cafe Order Management System" loading="lazy">
+                            <img src="images/Work4.png" alt="Cafe Order Management System" loading="lazy">
                         </div>
                         <div class="portfolio-overlay">
                             <div class="portfolio-links">
                                 <a href="#" class="portfolio-link">
                                     <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="portfolio-link">
-                                    <i class="fas fa-search-plus"></i>
                                 </a>
                             </div>
                         </div>
@@ -338,6 +343,84 @@
                     <div class="portfolio-content">
                         <h4>Cafe Order Management System</h4>
                         <p>Database Project</p>
+                    </div>
+                </div>
+
+
+                <!-- Document Projects -->
+                <div class="portfolio-item" data-category="documents" onclick="openDocumentModal('images/Object Detection.pdf', 'Object Detection Project', 'Machine Learning project focusing on waste separation using computer vision techniques. This document details the implementation of object detection algorithms for automated waste classification systems.')">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h4>Object Detection Project</h4>
+                        <p>Machine Learning & Computer Vision</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="documents" onclick="openDocumentModal('images/Comparative Study of Language Features.pdf', 'Comparative Study of Language Features', 'A comprehensive research study comparing different programming languages and their features. This document provides detailed analysis of language paradigms, performance characteristics, and use cases across various programming ecosystems.')">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h4>Comparative Study of Language Features</h4>
+                        <p>Programming Languages Research</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="documents" onclick="openDocumentModal('images/Security Assessment Project for Information Systems Simulation.pdf', 'Security Assessment Project', 'Cybersecurity research project focusing on information systems security assessment and simulation. This document covers security evaluation methodologies, vulnerability analysis, and simulation-based testing approaches.')">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h4>Security Assessment Project</h4>
+                        <p>Cybersecurity & Information Systems</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="documents" onclick="openDocumentModal('images/Security Assessment Project for Information Systems Simulation.pdf', 'Pentest Report', 'Comprehensive penetration testing report documenting security vulnerabilities, exploitation techniques, and remediation recommendations for information systems.')">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-links">
+                                <a href="#" class="portfolio-link">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h4>Pentest Report</h4>
+                        <p>Penetration Testing Documentation</p>
                     </div>
                 </div>
 
@@ -433,6 +516,7 @@
             </div>
         </section>
 
+
         <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="section-header">
@@ -499,6 +583,58 @@
             <div class="modal-info">
                 <h3 id="modalTitle"></h3>
                 <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Document Modal -->
+    <div id="documentModal" class="modal">
+        <div class="modal-content document-modal-content">
+            <span class="close">&times;</span>
+            <div class="document-modal-header">
+                <h3 id="documentModalTitle"></h3>
+                <p id="documentModalDescription"></p>
+            </div>
+            <div class="document-viewer">
+                <iframe id="documentFrame" src="" frameborder="0"></iframe>
+            </div>
+            <div class="document-actions">
+                <a id="downloadDocument" href="" download class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    Download PDF
+                </a>
+                <a id="openInNewTab" href="" target="_blank" class="btn btn-secondary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Open in New Tab
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content resume-modal-content">
+            <span class="close">&times;</span>
+            <div class="resume-modal-header">
+                <h3>Thanaboon Thongprada - Resume</h3>
+                <p>Computer Science Student | Bangkok University</p>
+            </div>
+            <div class="resume-viewer">
+                <iframe src="images/Faceless Resume.pdf#toolbar=0&navpanes=0&scrollbar=1" frameborder="0"></iframe>
+            </div>
+            <div class="resume-actions">
+                <a href="images/Faceless Resume.pdf" download class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </a>
+                <a href="images/Faceless Resume.pdf" target="_blank" class="btn btn-secondary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Open in New Tab
+                </a>
+                <button onclick="printResumePDF()" class="btn btn-secondary">
+                    <i class="fas fa-print"></i>
+                    Print Resume
+                </button>
             </div>
         </div>
     </div>

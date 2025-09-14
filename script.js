@@ -530,3 +530,108 @@ document.addEventListener('DOMContentLoaded', function() {
         closeBtn.addEventListener('click', closeCertificateModal);
     }
 });
+
+// Document Modal Functions
+function openDocumentModal(pdfSrc, title, description) {
+    const modal = document.getElementById('documentModal');
+    const modalTitle = document.getElementById('documentModalTitle');
+    const modalDescription = document.getElementById('documentModalDescription');
+    const documentFrame = document.getElementById('documentFrame');
+    const downloadLink = document.getElementById('downloadDocument');
+    const newTabLink = document.getElementById('openInNewTab');
+    
+    // Set modal content
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    documentFrame.src = pdfSrc + '#toolbar=0&navpanes=0&scrollbar=1';
+    downloadLink.href = pdfSrc;
+    newTabLink.href = pdfSrc;
+    
+    // Show modal
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeDocumentModal() {
+    const modal = document.getElementById('documentModal');
+    const documentFrame = document.getElementById('documentFrame');
+    
+    modal.style.display = 'none';
+    documentFrame.src = ''; // Clear iframe to stop loading
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Close document modal when clicking outside
+document.addEventListener('click', function(event) {
+    const documentModal = document.getElementById('documentModal');
+    
+    if (event.target === documentModal) {
+        closeDocumentModal();
+    }
+});
+
+// Close document modal with escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeDocumentModal();
+    }
+});
+
+// Initialize document modal close buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const documentModal = document.getElementById('documentModal');
+    if (documentModal) {
+        const closeBtns = documentModal.querySelectorAll('.close');
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', closeDocumentModal);
+        });
+    }
+});
+
+// Resume Modal Functions
+function openResumeModal() {
+    const modal = document.getElementById('resumeModal');
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeResumeModal() {
+    const modal = document.getElementById('resumeModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+function printResumePDF() {
+    // Open the PDF in a new window for printing
+    const printWindow = window.open('images/Faceless Resume.pdf', '_blank');
+    printWindow.onload = function() {
+        printWindow.print();
+    };
+}
+
+// Close resume modal when clicking outside
+document.addEventListener('click', function(event) {
+    const resumeModal = document.getElementById('resumeModal');
+    
+    if (event.target === resumeModal) {
+        closeResumeModal();
+    }
+});
+
+// Close resume modal with escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeResumeModal();
+    }
+});
+
+// Initialize resume modal close buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const resumeModal = document.getElementById('resumeModal');
+    if (resumeModal) {
+        const closeBtns = resumeModal.querySelectorAll('.close');
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', closeResumeModal);
+        });
+    }
+});
