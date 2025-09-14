@@ -57,6 +57,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="#certificates" class="nav-link" data-section="certificates">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certificates</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="#contact" class="nav-link" data-section="contact">
                             <i class="fas fa-envelope"></i>
                             <span>Contact</span>
@@ -67,17 +73,11 @@
 
             <!-- Social Links -->
             <div class="social-links">
-                <a href="#" class="social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/thanaboon-thongprada-845856384/" class="social-link" aria-label="LinkedIn" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#" class="social-link" aria-label="GitHub">
+                <a href="https://github.com/thanaboon8759" class="social-link" aria-label="GitHub" target="_blank">
                     <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="social-link" aria-label="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="#" class="social-link" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
                 </a>
             </div>
         </div>
@@ -203,8 +203,8 @@
                             <div class="timeline-content">
                                 <h4>Sciences and Mathematics Program</h4>
                                 <h5>Vajiravudh College</h5>
-                                <span class="timeline-date">2017 - 2021</span>
-                                <p>Completed with honors in Science and Mathematics</p>
+                                <span class="timeline-date">2019 - 2021</span>
+                                <p>Completed in Science and Mathematics Program</p>
                             </div>
                         </div>
                     </div>
@@ -223,20 +223,6 @@
                                     <li>Collaborate with team members on complex assignments</li>
                                     <li>Maintain high academic standards and project quality</li>
                                     <li>Participate in university tech competitions</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>Freelance Developer</h4>
-                                <h5>Self-Employed</h5>
-                                <span class="timeline-date">2023 - Present</span>
-                                <ul>
-                                    <li>Develop custom web applications</li>
-                                    <li>Provide data analysis and visualization services</li>
-                                    <li>Offer technical consultation and support</li>
-                                    <li>Maintain client relationships and project delivery</li>
                                 </ul>
                             </div>
                         </div>
@@ -398,54 +384,85 @@
                 <p class="section-subtitle">WHAT I DO?</p>
                 <h2 class="section-title">HERE ARE SOME OF MY EXPERTISE</h2>
             </div>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-hexagon skill-hexagon-blue">
-                        <i class="fas fa-lightbulb"></i>
+            <div class="skills-container">
+                <div class="skills-column">
+                    <h3 class="skills-category">SKILLS</h3>
+                    <div class="skills-list">
+                        <div class="skill-category">
+                            <h4>Programming:</h4>
+                            <p>Python, Java</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Web Development:</h4>
+                            <p>HTML, CSS, JavaScript</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Databases:</h4>
+                            <p>MySQL</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Tools & Platforms:</h4>
+                            <p>Git, Kali Linux, Power BI</p>
+                        </div>
                     </div>
-                    <h4>INNOVATIVE IDEAS</h4>
-                    <p>Creating creative solutions and thinking outside the box to solve complex problems with fresh perspectives.</p>
-                    <div class="skill-line skill-line-blue"></div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-hexagon skill-hexagon-red">
-                        <i class="fas fa-server"></i>
+                <div class="skills-column">
+                    <h3 class="skills-category">SOFT SKILLS</h3>
+                    <div class="skills-list">
+                        <ul class="soft-skills-list">
+                            <li>Positive attitude and open mind</li>
+                            <li>Teamwork</li>
+                            <li>Adaptability</li>
+                            <li>Time management</li>
+                            <li>Problem-solving</li>
+                        </ul>
                     </div>
-                    <h4>SOFTWARE</h4>
-                    <p>Developing robust software applications using modern programming languages and frameworks.</p>
-                    <div class="skill-line skill-line-red"></div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-hexagon skill-hexagon-yellow">
-                        <i class="fas fa-mobile-alt"></i>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="section">
+            <div class="section-header">
+                <p class="section-subtitle">ACHIEVEMENTS</p>
+                <h2 class="section-title">MY CERTIFICATES</h2>
+            </div>
+            <div class="certificates-grid">
+                <div class="certificate-item" onclick="openCertificateModal('images/certificate1.png', 'BU-ITI CTF Competition 2025', 'National-level cybersecurity challenge participation certificate')">
+                    <div class="certificate-image">
+                        <img src="images/certificate1.png" alt="BU-ITI CTF Competition Certificate" loading="lazy">
                     </div>
-                    <h4>APPLICATION</h4>
-                    <p>Building mobile and web applications with intuitive user interfaces and seamless functionality.</p>
-                    <div class="skill-line skill-line-yellow"></div>
+                    <div class="certificate-overlay">
+                        <h4>BU-ITI CTF Competition 2025</h4>
+                        <p>National-level cybersecurity challenge</p>
+                    </div>
+                    <div class="certificate-tooltip">
+                        <span>Click to view full certificate</span>
+                    </div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-hexagon skill-hexagon-purple">
-                        <i class="fas fa-palette"></i>
+                <div class="certificate-item" onclick="openCertificateModal('images/certificate2.png', 'Customer Service with Python: Build a Chatbot using ChatGPT', 'Coursera Project Network, Feb 2025')">
+                    <div class="certificate-image">
+                        <img src="images/certificate2.png" alt="Customer Service with Python Certificate" loading="lazy">
                     </div>
-                    <h4>GRAPHIC DESIGN</h4>
-                    <p>Creating visually appealing designs and user interfaces that enhance user experience and engagement.</p>
-                    <div class="skill-line skill-line-purple"></div>
+                    <div class="certificate-overlay">
+                        <h4>Customer Service with Python</h4>
+                        <p>Coursera Project Network, Feb 2025</p>
+                    </div>
+                    <div class="certificate-tooltip">
+                        <span>Click to view full certificate</span>
+                    </div>
                 </div>
-                <div class="skill-item">
-                    <div class="skill-hexagon skill-hexagon-teal">
-                        <i class="fas fa-database"></i>
+                <div class="certificate-item" onclick="openCertificateModal('images/certificate3.png', 'Basic Security Certificate', 'Cybersecurity fundamentals certification')">
+                    <div class="certificate-image">
+                        <img src="images/certificate3.png" alt="Basic Security Certificate" loading="lazy">
                     </div>
-                    <h4>DATA SCIENCE</h4>
-                    <p>Analyzing complex datasets to extract meaningful insights and build predictive models for business solutions.</p>
-                    <div class="skill-line skill-line-teal"></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-hexagon skill-hexagon-darkblue">
-                        <i class="fas fa-shield-alt"></i>
+                    <div class="certificate-overlay">
+                        <h4>Basic Security Certificate</h4>
+                        <p>Cybersecurity fundamentals</p>
                     </div>
-                    <h4>CYBERSECURITY</h4>
-                    <p>Protecting systems and networks from digital threats while ensuring data security and privacy.</p>
-                    <div class="skill-line skill-line-darkblue"></div>
+                    <div class="certificate-tooltip">
+                        <span>Click to view full certificate</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -458,15 +475,6 @@
             </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>Bangkok, Thailand</p>
-                        </div>
-                    </div>
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
@@ -486,22 +494,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/thanaboon-thongprada-845856384/" target="_blank">thanaboon-thongprada</a></p>
                         </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/thanaboon8759" target="_blank">thanaboon8759</a></p>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -512,6 +523,18 @@
         <span></span>
         <span></span>
         <span></span>
+    </div>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Certificate">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>

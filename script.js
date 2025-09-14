@@ -69,10 +69,8 @@ function initTypingAnimation() {
     const typingElement = document.querySelector('.typing-text');
     const texts = [
         'Computer Science Student',
-        'Data Science Enthusiast',
-        'Cybersecurity Specialist',
-        'Web Developer',
-        'Python Developer',
+        'Data Science Student',
+        'Cybersecurity Student',
         'Problem Solver'
     ];
     
@@ -485,3 +483,50 @@ function initFocusManagement() {
 
 // Initialize focus management
 initFocusManagement();
+
+// Certificate Modal Functions
+function openCertificateModal(imageSrc, title, description) {
+    const modal = document.getElementById('certificateModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    
+    modalImage.src = imageSrc;
+    modalImage.alt = title;
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeCertificateModal() {
+    const modal = document.getElementById('certificateModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Close modal when clicking outside the image
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('certificateModal');
+    const modalContent = document.querySelector('.modal-content');
+    
+    if (event.target === modal) {
+        closeCertificateModal();
+    }
+});
+
+// Close modal with escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeCertificateModal();
+    }
+});
+
+// Initialize modal close button
+document.addEventListener('DOMContentLoaded', function() {
+    const closeBtn = document.querySelector('.close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeCertificateModal);
+    }
+});
