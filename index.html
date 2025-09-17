@@ -37,12 +37,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#resume" class="nav-link" data-section="resume">
-                            <i class="fas fa-file-alt"></i>
-                            <span>Resume</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a href="#portfolio" class="nav-link" data-section="portfolio">
                             <i class="fas fa-briefcase"></i>
                             <span>Portfolio</span>
@@ -101,10 +95,6 @@
                     </p>
                     <div class="hero-buttons">
                         <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                        <button onclick="openResumeModal()" class="btn btn-resume">
-                            <i class="fas fa-route"></i>
-                            View Resume
-                        </button>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -193,57 +183,6 @@
             </div>
         </section>
 
-        <!-- Resume Section -->
-        <section id="resume" class="section">
-            <div class="section-header">
-                <h2 class="section-title">Resume</h2>
-                <p class="section-subtitle">My professional background and experience</p>
-            </div>
-            <div class="resume-content">
-                <div class="resume-section">
-                    <h3 class="resume-title">Education</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>Bachelor of Computer Science</h4>
-                                <h5>Bangkok University</h5>
-                                <span class="timeline-date">2022 - Present</span>
-                                <p>School of Information Technology and Innovation - Computer Science - Data Science and Cybersecurity</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>Sciences and Mathematics Program</h4>
-                                <h5>Vajiravudh College</h5>
-                                <span class="timeline-date">2019 - 2021</span>
-                                <p>Completed in Science and Mathematics Program</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="resume-section">
-                    <h3 class="resume-title">Experience</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-marker"></div>
-                            <div class="timeline-content">
-                                <h4>Computer Science Student</h4>
-                                <h5>Bangkok University</h5>
-                                <span class="timeline-date">2022 - Present</span>
-                                <ul>
-                                    <li>Lead development of multiple programming projects</li>
-                                    <li>Collaborate with team members on complex assignments</li>
-                                    <li>Maintain high academic standards and project quality</li>
-                                    <li>Participate in university tech competitions</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Portfolio Section -->
         <section id="portfolio" class="section">
@@ -611,33 +550,6 @@
         </div>
     </div>
 
-    <!-- Resume Modal -->
-    <div id="resumeModal" class="modal">
-        <div class="modal-content resume-modal-content">
-            <span class="close">&times;</span>
-            <div class="resume-modal-header">
-                <h3>Thanaboon Thongprada - Resume</h3>
-                <p>Computer Science Student | Bangkok University</p>
-            </div>
-            <div class="resume-viewer">
-                <iframe src="images/Faceless Resume.pdf#toolbar=0&navpanes=0&scrollbar=1" frameborder="0"></iframe>
-            </div>
-            <div class="resume-actions">
-                <a href="images/Faceless Resume.pdf" download class="btn btn-primary">
-                    <i class="fas fa-download"></i>
-                    Download Resume
-                </a>
-                <a href="images/Faceless Resume.pdf" target="_blank" class="btn btn-secondary">
-                    <i class="fas fa-external-link-alt"></i>
-                    Open in New Tab
-                </a>
-                <button onclick="printResumePDF()" class="btn btn-secondary">
-                    <i class="fas fa-print"></i>
-                    Print Resume
-                </button>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
