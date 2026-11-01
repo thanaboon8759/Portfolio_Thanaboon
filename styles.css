@@ -367,7 +367,7 @@ dd { font-weight: 500; overflow-wrap: anywhere; }
 
 .card-link {
     margin-top: auto;
-    padding-top: 14px;
+    padding: 14px 0 0;
     align-self: flex-start;
     border: 0;
     background: none;
