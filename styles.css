@@ -335,7 +335,7 @@ dd { font-weight: 500; overflow-wrap: anywhere; }
 .card:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); transform: translateY(-2px); }
 
 .card > img,
-.doc-icon,
+.card-cover,
 .cert-thumb {
     aspect-ratio: 16 / 10;
     width: 100%;
@@ -343,17 +343,27 @@ dd { font-weight: 500; overflow-wrap: anywhere; }
 }
 .card > img { object-fit: cover; object-position: top; background: var(--bg); }
 
-.doc-icon {
+.card-cover {
     display: grid;
     place-items: center;
     font-size: 2.6rem;
     color: var(--accent);
-    background: var(--accent-soft);
+    background-color: var(--accent-soft);
+    background-image: radial-gradient(color-mix(in srgb, var(--accent) 18%, transparent) 1px, transparent 1px);
+    background-size: 16px 16px;
 }
 
 .card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
 .card-body h3 { font-size: 1rem; line-height: 1.35; }
 .card-body p { color: var(--muted); font-size: 0.88rem; margin-top: 4px; }
+
+.card-note {
+    margin-top: auto;
+    padding-top: 14px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
 
 .card-link {
     margin-top: auto;
