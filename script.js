@@ -55,7 +55,7 @@ function initTypingAnimation() {
 
     const texts = [
         'Computer Science Student',
-        'Data Science Student',
+        'Data & AI Student',
         'Cybersecurity Student',
         'Problem Solver'
     ];

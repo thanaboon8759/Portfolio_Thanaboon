@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanaboon Thongprada | Computer Science Portfolio</title>
-    <meta name="description" content="Portfolio of Thanaboon Thongprada, a Computer Science student at Bangkok University focused on data science and cybersecurity. Projects, reports, skills and certificates.">
+    <meta name="description" content="Portfolio of Thanaboon Thongprada, a Computer Science student at Bangkok University focused on data, AI and cybersecurity. Projects, reports, skills and certificates.">
     <link rel="canonical" href="https://thanaboon8759.github.io/Portfolio_Thanaboon/">
     <meta name="theme-color" content="#f7f7f5">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Thanaboon Thongprada | Computer Science Portfolio">
-    <meta property="og:description" content="Computer Science student at Bangkok University focused on data science and cybersecurity.">
+    <meta property="og:description" content="Computer Science student at Bangkok University focused on data, AI and cybersecurity.">
     <meta property="og:url" content="https://thanaboon8759.github.io/Portfolio_Thanaboon/">
     <meta property="og:image" content="https://thanaboon8759.github.io/Portfolio_Thanaboon/images/P9290015.jpeg">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ETT%3C/text%3E%3C/svg%3E">
@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -50,8 +50,8 @@
                     <span class="typing-text" aria-hidden="true">Computer Science Student</span>
                 </p>
                 <p class="hero-description">
-                    Computer Science student at Bangkok University focused on data science and cybersecurity.
-                    I build web apps and data projects, and I like taking complex problems apart.
+                    Computer Science student at Bangkok University focused on data, AI and cybersecurity.
+                    I build AI tools, data dashboards and web apps, and I like taking complex problems apart.
                 </p>
                 <div class="hero-buttons">
                     <a href="#portfolio" class="btn btn-primary">View my work</a>
@@ -76,18 +76,19 @@
                 <div class="about-text">
                     <p>
                         I'm a Computer Science student at Bangkok University's School of Information Technology
-                        and Innovation, studying data science and cybersecurity. I like using technology to solve
-                        real problems, from training a model that sorts waste to testing a system for security holes.
+                        and Innovation, working across data, AI and cybersecurity. I like using technology to solve
+                        real problems, from an AI tool that screens resumes to a model that sorts waste to testing a
+                        system for security holes.
                     </p>
                     <p>
-                        Outside class I build small web apps and dashboards and enter security competitions
-                        such as CTFs, to keep learning new tools.
+                        Outside class I build AI tools, data dashboards and web apps, and enter security
+                        competitions such as CTFs, to keep learning new tools.
                     </p>
                 </div>
                 <dl class="about-details">
                     <div><dt>Location</dt><dd>Bangkok, Thailand</dd></div>
                     <div><dt>University</dt><dd>Bangkok University</dd></div>
-                    <div><dt>Focus</dt><dd>Data Science &amp; Cybersecurity</dd></div>
+                    <div><dt>Focus</dt><dd>Data, AI &amp; Cybersecurity</dd></div>
                     <div><dt>Email</dt><dd><a href="mailto:thanaboon8759@gmail.com">thanaboon8759@gmail.com</a></dd></div>
                 </dl>
             </div>
@@ -144,10 +145,36 @@
             <div class="portfolio-filters" role="group" aria-label="Filter projects">
                 <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
                 <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web &amp; App</button>
-                <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">Data Science</button>
+                <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">Data &amp; AI</button>
                 <button type="button" class="filter-btn" data-filter="documents" aria-pressed="false">Documents</button>
             </div>
             <div class="card-grid portfolio-grid">
+                <article class="card portfolio-item" data-category="data">
+                    <div class="card-cover"><i class="fas fa-brain" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <h3>DUMB DOG AI: Resume Screening</h3>
+                        <p>AI · FastAPI, LLM, OCR, pgvector</p>
+                        <a class="card-link" href="https://github.com/thanaboon8759/RESUME-AI" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+
+                <article class="card portfolio-item" data-category="web">
+                    <div class="card-cover"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <h3>Computer Repair Service System</h3>
+                        <p>Full Stack · React, Express, MongoDB</p>
+                        <a class="card-link" href="https://github.com/thanaboon8759/Service-System" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+
+                <article class="card portfolio-item" data-category="web">
+                    <div class="card-cover"><i class="fas fa-cat" aria-hidden="true"></i></div>
+                    <div class="card-body">
+                        <h3>PurrfectPics</h3>
+                        <p>Web App · Flask, The Cat API</p>
+                        <a class="card-link" href="https://github.com/thanaboon8759/Cat_API" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
                 <article class="card portfolio-item" data-category="web">
                     <div class="card-cover"><i class="fas fa-cloud-sun" aria-hidden="true"></i></div>
                     <div class="card-body">
@@ -161,7 +188,7 @@
                     <div class="card-cover"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
                     <div class="card-body">
                         <h3>Weather Data Dashboard</h3>
-                        <p>Data Dashboard</p>
+                        <p>Data Dashboard · Python, Streamlit</p>
                         <a class="card-link" href="https://github.com/thanaboon8759/Weather-Data-Dashboard" target="_blank" rel="noopener">View on GitHub <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
@@ -263,10 +290,11 @@
                 <div class="skills-column">
                     <h3>Technical</h3>
                     <dl class="skills-list">
-                        <div><dt>Programming</dt><dd>Python, Java</dd></div>
-                        <div><dt>Web Development</dt><dd>HTML, CSS, JavaScript, React</dd></div>
-                        <div><dt>Databases</dt><dd>MySQL</dd></div>
-                        <div><dt>Tools &amp; Platforms</dt><dd>Git, Kali Linux, Power BI</dd></div>
+                        <div><dt>Data &amp; AI</dt><dd>LLM APIs, PaddleOCR, pgvector, Streamlit, Power BI</dd></div>
+                        <div><dt>Programming</dt><dd>Python, Java, JavaScript</dd></div>
+                        <div><dt>Web &amp; Backend</dt><dd>React, FastAPI, Flask, Node.js / Express, HTML, CSS</dd></div>
+                        <div><dt>Databases</dt><dd>PostgreSQL (Supabase), MongoDB, MySQL</dd></div>
+                        <div><dt>Tools &amp; Platforms</dt><dd>Git, Kali Linux</dd></div>
                     </dl>
                 </div>
                 <div class="skills-column">
@@ -382,6 +410,6 @@
         </div>
     </dialog>
 
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>
