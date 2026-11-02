@@ -13,7 +13,7 @@ const tiles: BentoTile[] = [
     description: 'LLM-powered tools, OCR pipelines, vector search and data dashboards.',
     items: group('Data & AI'),
     highlights: [
-      { label: 'DUMB DOG AI', detail: 'LLM resume screening', href: 'https://github.com/thanaboon8759/RESUME-AI' },
+      { label: 'Resume AI', detail: 'LLM resume screening', href: 'https://github.com/thanaboon8759/RESUME-AI' },
       { label: 'Weather Data Dashboard', detail: 'Streamlit analytics', href: 'https://github.com/thanaboon8759/Weather-Data-Dashboard' },
       { label: 'Waste object detection', detail: 'Computer vision' },
     ],

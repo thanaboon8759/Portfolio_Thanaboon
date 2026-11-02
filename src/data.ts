@@ -35,7 +35,7 @@ export type Project = {
 const repo = (name: string) => `https://github.com/thanaboon8759/${name}`
 
 export const projects: Project[] = [
-  { title: 'DUMB DOG AI: Resume Screening', subtitle: 'AI · FastAPI, LLM, OCR, pgvector', category: 'data', icon: Brain, repo: repo('RESUME-AI') },
+  { title: 'Resume AI', subtitle: 'AI Resume Screening · FastAPI, LLM, OCR, pgvector', category: 'data', icon: Brain, repo: repo('RESUME-AI') },
   { title: 'Computer Repair Service System', subtitle: 'Full Stack · React, Express, MongoDB', category: 'web', icon: Wrench, repo: repo('Service-System') },
   { title: 'PurrfectPics', subtitle: 'Web App · Flask, The Cat API', category: 'web', icon: Cat, repo: repo('Cat_API') },
   { title: 'React Weather App', subtitle: 'Web App · React', category: 'web', icon: CloudSun, repo: repo('React-Weather-App') },
