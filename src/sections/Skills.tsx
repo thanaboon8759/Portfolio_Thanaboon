@@ -1,31 +1,35 @@
+import { Brain, Code, Database, Handshake, Server, Wrench } from 'lucide-react'
+
 import { Section } from '@/components/Section'
+import { TechStackBento, type BentoTile } from '@/components/ui/tech-stack-bento'
 import { skillGroups, softSkills } from '@/data'
 
-// shortcut: v1-style skills lists, replaced by the 21st Tech Stack Bento Grid once its prompt is pasted
+const group = (label: string) => skillGroups.find(g => g.label === label)?.items ?? []
+
+const tiles: BentoTile[] = [
+  {
+    title: 'Data & AI',
+    icon: Brain,
+    description: 'LLM-powered tools, OCR pipelines, vector search and data dashboards.',
+    items: group('Data & AI'),
+    highlights: [
+      { label: 'DUMB DOG AI', detail: 'LLM resume screening', href: 'https://github.com/thanaboon8759/RESUME-AI' },
+      { label: 'Weather Data Dashboard', detail: 'Streamlit analytics', href: 'https://github.com/thanaboon8759/Weather-Data-Dashboard' },
+      { label: 'Waste object detection', detail: 'Computer vision' },
+    ],
+    className: 'sm:col-span-2 lg:row-span-2',
+  },
+  { title: 'Web & Backend', icon: Server, items: group('Web & Backend'), className: 'lg:col-span-2' },
+  { title: 'Programming', icon: Code, items: group('Programming') },
+  { title: 'Databases', icon: Database, items: group('Databases') },
+  { title: 'Tools & Platforms', icon: Wrench, items: group('Tools & Platforms'), className: 'lg:col-span-2' },
+  { title: 'Soft skills', icon: Handshake, items: softSkills, className: 'sm:col-span-2' },
+]
+
 export function Skills() {
   return (
     <Section id="skills" eyebrow="Skills" title="What I work with">
-      <div className="grid gap-5 md:grid-cols-2">
-        <div className="rounded-lg border bg-card p-5.5 sm:p-7">
-          <h3 className="mb-4.5 text-lg font-semibold">Technical</h3>
-          <dl className="grid gap-3.5">
-            {skillGroups.map(g => (
-              <div key={g.label} className="border-b pb-3.5 last:border-0 last:pb-0">
-                <dt className="text-xs tracking-wider text-muted-foreground uppercase">{g.label}</dt>
-                <dd className="font-medium">{g.items.join(', ')}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-        <div className="rounded-lg border bg-card p-5.5 sm:p-7">
-          <h3 className="mb-4.5 text-lg font-semibold">Soft skills</h3>
-          <ul className="flex flex-wrap gap-2">
-            {softSkills.map(s => (
-              <li key={s} className="rounded-full bg-accent px-3.5 py-1.5 text-sm font-medium text-accent-foreground">{s}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      <TechStackBento tiles={tiles} />
     </Section>
   )
 }

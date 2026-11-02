@@ -46,7 +46,7 @@ export function Hero() {
   const role = useTypingText(profile.roles)
 
   return (
-    <section id="home" className="mx-auto grid w-full max-w-[1080px] items-center gap-8 px-4 pt-10 pb-14 sm:px-6 md:grid-cols-[1.3fr_1fr] md:gap-14 md:pt-18 md:pb-22">
+    <section id="home" className="mx-auto grid w-full max-w-[1080px] items-center gap-8 px-4 pt-10 pb-14 sm:px-6 md:grid-cols-[1.3fr_1fr] md:gap-14 md:pt-28 md:pb-22">
       <div>
         <p className="eyebrow">Hello, I'm</p>
         <h1 className="text-[clamp(2.2rem,5vw,3.4rem)] leading-[1.1] font-bold tracking-tight">{profile.name}</h1>

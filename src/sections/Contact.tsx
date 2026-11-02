@@ -35,7 +35,8 @@ export function Contact() {
 
 export function Footer() {
   return (
-    <footer className="border-t py-7 text-sm text-muted-foreground">
+    // Extra bottom padding on phones so the bottom-pinned nav never covers the footer
+    <footer className="border-t pt-7 pb-24 text-sm text-muted-foreground md:pb-7">
       <p className="mx-auto w-full max-w-[1080px] px-4 sm:px-6">© 2026 {profile.name}</p>
     </footer>
   )

@@ -1,6 +1,6 @@
 import type { LucideIcon } from 'lucide-react'
 import {
-  Bot, Brain, Cat, ChartLine, CloudSun, Coffee, FileText, MailOpen, Network, Wrench,
+  Bot, Brain, Cat, ChartLine, CloudSun, Coffee, FileText, GraduationCap, MailOpen, Network, School, ShieldCheck, Wrench,
 } from 'lucide-react'
 
 export const profile = {
@@ -80,16 +80,19 @@ export const skillGroups: { label: string; items: string[] }[] = [
 
 export const softSkills = ['Positive attitude', 'Teamwork', 'Adaptability', 'Time management', 'Problem-solving']
 
-export type TimelineEntry = { date: string; title: string; place: string; description?: string; points?: string[]; tags?: string[] }
+export type TimelineEntry = {
+  date: string
+  title: string
+  place: string
+  icon: LucideIcon
+  description?: string
+  points?: string[]
+  tags?: string[]
+}
 
-export const education: TimelineEntry[] = [
-  { date: '2022 – Present', title: 'Bachelor of Computer Science', place: 'Bangkok University', description: 'School of Information Technology and Innovation. Data Science and Cybersecurity track.' },
-  { date: '2019 – 2021', title: 'Science and Mathematics Program', place: 'Vajiravudh College' },
-]
-
-export const experience: TimelineEntry[] = [
+export const journey: TimelineEntry[] = [
   {
-    date: '2022 – Present', title: 'Computer Science projects', place: 'Bangkok University',
+    date: '2022 – Present', title: 'Computer Science projects', place: 'Bangkok University', icon: ShieldCheck,
     points: [
       'Competed in the BU-ITI CTF Competition 2025, a national-level cybersecurity challenge',
       'Wrote a penetration testing report for CS471',
@@ -97,5 +100,14 @@ export const experience: TimelineEntry[] = [
       'Ran a security assessment of a simulated information system',
     ],
     tags: ['Python', 'Computer Vision', 'Kali Linux', 'Pentesting'],
+  },
+  {
+    date: '2022 – Present', title: 'Bachelor of Computer Science', place: 'Bangkok University', icon: GraduationCap,
+    description: 'School of Information Technology and Innovation. Data Science and Cybersecurity track.',
+    tags: ['Data Science', 'Cybersecurity'],
+  },
+  {
+    date: '2019 – 2021', title: 'Science and Mathematics Program', place: 'Vajiravudh College', icon: School,
+    tags: ['Science', 'Mathematics'],
   },
 ]
