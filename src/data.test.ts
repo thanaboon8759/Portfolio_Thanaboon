@@ -48,7 +48,7 @@ test('featured project is Resume AI with its real repo', () => {
   assert.equal(featured.repo, 'https://github.com/thanaboon8759/RESUME-AI')
 })
 
-test('featured stack matches the README', () => {
+test('featured stack matches the agreed list', () => {
   assert.deepEqual(featured.stack, ['FastAPI', 'Supabase', 'PostgreSQL', 'LLM API', 'PyMuPDF', 'python-docx', 'PaddleOCR', 'pgvector', 'pytest'])
 })
 
