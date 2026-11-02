@@ -1,0 +1,128 @@
+@import 'tailwindcss';
+
+/* shadcn/21st components use `dark:`; index.html toggles .dark from prefers-color-scheme */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Site palette from the v1 stylesheet, exposed under shadcn token names */
+:root {
+  --background: #f7f7f5;
+  --foreground: #1c1d1f;
+  --card: #ffffff;
+  --card-foreground: #1c1d1f;
+  --popover: #ffffff;
+  --popover-foreground: #1c1d1f;
+  --primary: #0f766e;
+  --primary-foreground: #ffffff;
+  --secondary: #e6f2f0;
+  --secondary-foreground: #0f766e;
+  --muted: #efefec;
+  --muted-foreground: #5b5f66;
+  --accent: #e6f2f0;
+  --accent-foreground: #0f766e;
+  --destructive: #dc2626;
+  --border: #e4e4e0;
+  --input: #e4e4e0;
+  --ring: #0f766e;
+  --radius: 0.875rem;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #121414;
+  --foreground: #ececea;
+  --card: #1b1e1e;
+  --card-foreground: #ececea;
+  --popover: #1b1e1e;
+  --popover-foreground: #ececea;
+  --primary: #2dd4bf;
+  --primary-foreground: #0b1a19;
+  --secondary: #163331;
+  --secondary-foreground: #2dd4bf;
+  --muted: #202424;
+  --muted-foreground: #a3a8ad;
+  --accent: #163331;
+  --accent-foreground: #2dd4bf;
+  --destructive: #f87171;
+  --border: #2c3030;
+  --input: #2c3030;
+  --ring: #2dd4bf;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.65;
+  }
+  :focus-visible {
+    @apply outline-3 outline-offset-3 outline-ring rounded-sm;
+  }
+  dialog::backdrop {
+    background: rgb(0 0 0 / 0.6);
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply mb-2 text-[0.82rem] font-semibold uppercase tracking-[0.08em] text-primary;
+  }
+  .section-title {
+    @apply text-[clamp(1.6rem,3.5vw,2.1rem)] font-bold leading-tight tracking-tight;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-transparent px-5.5 py-2.5 text-[0.95rem] font-medium no-underline transition-colors;
+  }
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:opacity-90;
+  }
+  .btn-secondary {
+    @apply border-border bg-card text-foreground hover:border-primary hover:text-primary;
+  }
+  .typing-caret::after {
+    content: '';
+    @apply ml-[3px] inline-block h-[1.1em] w-0.5 bg-primary align-[-0.15em];
+    animation: blink 1s steps(1) infinite;
+  }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
