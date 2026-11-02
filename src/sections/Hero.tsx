@@ -55,8 +55,9 @@ export function Hero() {
           <span className="typing-caret" aria-hidden="true">{role}</span>
         </p>
         <p className="mt-3 max-w-[52ch] text-muted-foreground">
-          Computer Science student at Bangkok University focused on data, AI and cybersecurity.
-          I build AI tools, data dashboards and web apps, and I like taking complex problems apart.
+          I study Computer Science at Bangkok University, with a focus on data, AI and cybersecurity.
+          Most of my projects are AI tools, dashboards or web apps. I like taking a hard problem apart
+          until it makes sense.
         </p>
         <div className="mt-7 flex flex-wrap gap-3">
           <a href="#portfolio" className="btn btn-primary flex-1 sm:flex-none">View my work</a>

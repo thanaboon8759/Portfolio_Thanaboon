@@ -13,14 +13,13 @@ export function About() {
       <div className="grid gap-8 md:grid-cols-[1.4fr_1fr] md:gap-12">
         <div className="space-y-4 text-muted-foreground">
           <p>
-            I'm a Computer Science student at Bangkok University's School of Information Technology
-            and Innovation, working across data, AI and cybersecurity. I like using technology to solve
-            real problems, from an AI tool that screens resumes to a model that sorts waste to testing a
-            system for security holes.
+            I'm in Bangkok University's School of Information Technology and Innovation, on the Data
+            Science and Cybersecurity track. My projects so far include an AI tool that screens resumes
+            and a model that sorts waste, plus a security assessment of a simulated information system.
           </p>
           <p>
-            Outside class I build AI tools, data dashboards and web apps, and enter security
-            competitions such as CTFs, to keep learning new tools.
+            I also enter security competitions such as CTFs, including the BU-ITI CTF Competition in
+            2025. They're a good way to pick up new tools.
           </p>
         </div>
         <dl className="grid gap-3.5">
