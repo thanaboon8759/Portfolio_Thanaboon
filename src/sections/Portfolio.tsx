@@ -19,14 +19,14 @@ function ProjectCard({ project, onOpenPdf }: { project: Project; onOpenPdf: (p: 
       <div className="flex flex-1 flex-col px-5 pt-4.5 pb-5">
         <h3 className="leading-snug font-semibold">{project.title}</h3>
         <p className="mt-1 text-sm text-muted-foreground">{project.subtitle}</p>
-        {project.repo ? (
-          <a className={linkClass} href={project.repo} target="_blank" rel="noopener">
-            View on GitHub <ArrowRight className="inline size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-          </a>
-        ) : project.pdf ? (
+        {project.pdf ? (
           <button type="button" className={cn(linkClass, 'cursor-pointer')} onClick={() => onOpenPdf(project)}>
             Read report <ArrowRight className="inline size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
           </button>
+        ) : project.repo ? (
+          <a className={linkClass} href={project.repo} target="_blank" rel="noopener">
+            View on GitHub <ArrowRight className="inline size-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+          </a>
         ) : (
           <span className="mt-auto pt-3.5 text-sm font-medium text-muted-foreground">University project</span>
         )}
@@ -41,7 +41,7 @@ export function Portfolio() {
   const shown = projects.filter(p => filter === 'all' || p.category === filter)
 
   return (
-    <Section id="portfolio" eyebrow="Portfolio" title="Recent work">
+    <Section id="portfolio" eyebrow="Portfolio" title="Projects">
       <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label="Filter projects">
         {filters.map(f => (
           <button
