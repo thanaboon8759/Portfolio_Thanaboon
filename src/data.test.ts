@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 
-import { certificates, featured, featuredVisibleFor, filters, projects } from './data.ts'
+import { certificates, featured, featuredVisibleFor, filters, journey, profile, projects } from './data.ts'
 
 test('project titles are the 7 grid cards in order', () => {
   assert.deepEqual(projects.map(p => p.title), [
@@ -54,4 +54,16 @@ test('featured stack matches the README', () => {
 
 test('featured block shows for all and Data & AI only', () => {
   assert.deepEqual(filters.map(f => featuredVisibleFor(f.id)), [true, true, false, false])
+})
+
+test('role says graduate', () => {
+  assert.equal(profile.role, 'Computer Science graduate, Data & AI')
+})
+
+test('no journey entry is still Present', () => {
+  assert.deepEqual(journey.filter(e => e.date.includes('Present')).map(e => e.title), [])
+})
+
+test('degree ends in 2026', () => {
+  assert.equal(journey.find(e => e.title === 'Bachelor of Computer Science')?.date, '2022 – 2026')
 })

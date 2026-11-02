@@ -10,7 +10,7 @@ export const profile = {
   githubHandle: 'thanaboon8759',
   linkedin: 'https://www.linkedin.com/in/thanaboon-thongprada-845856384/',
   linkedinHandle: 'thanaboon-thongprada',
-  role: 'Computer Science student, Data & AI',
+  role: 'Computer Science graduate, Data & AI',
 }
 
 export type Category = 'data' | 'web' | 'security'
@@ -101,7 +101,7 @@ export type TimelineEntry = {
 
 export const journey: TimelineEntry[] = [
   {
-    date: '2022 – Present', title: 'Computer Science projects', place: 'Bangkok University', icon: ShieldCheck,
+    date: '2022 – 2026', title: 'Computer Science projects', place: 'Bangkok University', icon: ShieldCheck,
     points: [
       'Built an object-detection model for waste separation',
       'Wrote a penetration testing report for CS471',
@@ -111,7 +111,7 @@ export const journey: TimelineEntry[] = [
     tags: ['Python', 'Computer Vision', 'Kali Linux', 'Pentesting'],
   },
   {
-    date: '2022 – Present', title: 'Bachelor of Computer Science', place: 'Bangkok University', icon: GraduationCap,
+    date: '2022 – 2026', title: 'Bachelor of Computer Science', place: 'Bangkok University', icon: GraduationCap,
     description: 'School of Information Technology and Innovation. Data Science and Cybersecurity track.',
     tags: ['Data Science', 'Cybersecurity'],
   },

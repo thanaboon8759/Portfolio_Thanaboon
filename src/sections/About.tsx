@@ -13,9 +13,10 @@ export function About() {
       <div className="grid gap-8 md:grid-cols-[1.4fr_1fr] md:gap-12">
         <div className="space-y-4 text-muted-foreground">
           <p>
-            I'm in Bangkok University's School of Information Technology and Innovation, on the Data
-            Science and Cybersecurity track. My projects so far include an AI tool that screens resumes
-            and a model that sorts waste, plus a security assessment of a simulated information system.
+            I graduated from Bangkok University's School of Information Technology and Innovation in
+            2026, on the Data Science and Cybersecurity track. My projects include an AI tool that screens
+            resumes and a model that sorts waste, plus a security assessment of a simulated information
+            system.
           </p>
           <p>
             I also enter security competitions such as CTFs, including the BU-ITI CTF Competition in

@@ -13,8 +13,8 @@ export function Hero() {
         <h1 className="text-[clamp(2.2rem,5vw,3.4rem)] leading-[1.1] font-bold tracking-tight">{profile.name}</h1>
         <p className="mt-3 text-xl font-medium text-muted-foreground">{profile.role}</p>
         <p className="mt-3 max-w-[52ch] text-muted-foreground">
-          I study Computer Science at Bangkok University, and my main interest is data and AI: a resume
-          screening tool built on an LLM, a weather data dashboard, and a computer vision model that sorts
+          I graduated in Computer Science from Bangkok University in 2026, and my main interest is data
+          and AI: a resume screening tool built on an LLM, a weather data dashboard, and a computer vision model that sorts
           waste. I also do some security work, mostly reports and CTFs.
         </p>
         <div className="mt-7 flex flex-wrap gap-3">
