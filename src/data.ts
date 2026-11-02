@@ -1,6 +1,6 @@
 import type { LucideIcon } from 'lucide-react'
 import {
-  Bot, ChartLine, CloudSun, FileText, GraduationCap, Network, School, ShieldCheck, Wrench,
+  Bot, Brain, ChartLine, CloudSun, FileText, GraduationCap, Network, School, Wrench,
 } from 'lucide-react'
 
 export const profile = {
@@ -101,7 +101,7 @@ export type TimelineEntry = {
 
 export const journey: TimelineEntry[] = [
   {
-    date: '2022 – 2026', title: 'Computer Science projects', place: 'Bangkok University', icon: ShieldCheck,
+    date: '2022 – 2026', title: 'Computer Science projects', place: 'Bangkok University', icon: Brain,
     points: [
       'Built an object-detection model for waste separation',
       'Wrote a penetration testing report for CS471',
