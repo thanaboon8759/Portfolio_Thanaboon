@@ -3,12 +3,11 @@ import { ArrowRight, Download, ExternalLink } from 'lucide-react'
 
 import { Modal } from '@/components/Modal'
 import { Section } from '@/components/Section'
-import { filters, projects, type Project } from '@/data'
+import { FeaturedProject } from '@/components/FeaturedProject'
+import { featured, featuredVisibleFor, filters, projects, type Project } from '@/data'
+import { cardClass, coverClass } from '@/lib/card-classes'
 import { asset, cn } from '@/lib/utils'
 
-export const cardClass = 'flex flex-col overflow-hidden rounded-lg border bg-card shadow-xs transition hover:-translate-y-0.5 hover:border-primary/40'
-export const coverClass =
-  'grid aspect-[16/10] w-full place-items-center border-b bg-accent text-primary bg-[radial-gradient(color-mix(in_srgb,var(--primary)_18%,transparent)_1px,transparent_1px)] bg-size-[16px_16px]'
 const linkClass = 'group mt-auto self-start pt-3.5 text-[0.9rem] font-semibold text-primary no-underline'
 
 function ProjectCard({ project, onOpenPdf }: { project: Project; onOpenPdf: (p: Project) => void }) {
@@ -55,6 +54,7 @@ export function Portfolio() {
           </button>
         ))}
       </div>
+      {featuredVisibleFor(filter) && <FeaturedProject project={featured} />}
       <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-5">
         {shown.map(p => <ProjectCard key={p.title} project={p} onOpenPdf={setDoc} />)}
       </div>

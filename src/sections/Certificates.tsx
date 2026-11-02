@@ -3,8 +3,8 @@ import { useState } from 'react'
 import { Modal } from '@/components/Modal'
 import { Section } from '@/components/Section'
 import { certificates, type Certificate } from '@/data'
+import { cardClass } from '@/lib/card-classes'
 import { asset } from '@/lib/utils'
-import { cardClass } from './Portfolio'
 
 export function Certificates() {
   const [open, setOpen] = useState<Certificate | null>(null)

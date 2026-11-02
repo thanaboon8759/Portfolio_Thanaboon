@@ -1,6 +1,6 @@
 import type { LucideIcon } from 'lucide-react'
 import {
-  Bot, Brain, ChartLine, CloudSun, FileText, GraduationCap, Network, School, ShieldCheck, Wrench,
+  Bot, ChartLine, CloudSun, FileText, GraduationCap, Network, School, ShieldCheck, Wrench,
 } from 'lucide-react'
 
 export const profile = {
@@ -35,8 +35,7 @@ export type Project = {
 const repo = (name: string) => `https://github.com/thanaboon8759/${name}`
 
 export const projects: Project[] = [
-  // Data & AI
-  { title: 'Resume AI', subtitle: 'AI Resume Screening · FastAPI, LLM, OCR, pgvector', category: 'data', icon: Brain, repo: repo('RESUME-AI') },
+  // Data & AI (Resume AI is shown separately as `featured`)
   { title: 'Weather Data Dashboard', subtitle: 'Data Dashboard · Python, Streamlit', category: 'data', icon: ChartLine, repo: repo('Weather-Data-Dashboard') },
   {
     title: 'Object Detection for Waste Separation', subtitle: 'Computer Vision · Machine Learning', category: 'data', icon: Bot,
@@ -56,6 +55,23 @@ export const projects: Project[] = [
   },
   { title: 'Network Security Design', subtitle: 'Cybersecurity Project', category: 'security', icon: Network },
 ]
+
+// Shown as its own block above the project grid; facts from the RESUME-AI README
+export const featured = {
+  title: 'Resume AI',
+  tagline: 'AI resume screening for HR teams',
+  summary: 'A backend that reads uploaded resumes and ranks candidates against a job description, so HR can see who matches and what is missing before deciding.',
+  points: [
+    'Extracts text from PDF and DOCX resumes with PyMuPDF, python-docx and PaddleOCR',
+    'Ranks candidates against the job description and lists missing information',
+    'Lets HR shortlist, reject or mark candidates undecided, with a reason',
+    'Supabase handles sign-in, the PostgreSQL database and resume storage',
+  ],
+  stack: ['FastAPI', 'Supabase', 'PostgreSQL', 'LLM API', 'PyMuPDF', 'python-docx', 'PaddleOCR', 'pgvector', 'pytest'],
+  repo: repo('RESUME-AI'),
+}
+
+export const featuredVisibleFor = (filter: 'all' | Category) => filter === 'all' || filter === 'data'
 
 export type Certificate = { image: string; title: string; shortTitle: string; description: string; width: number; height: number }
 
