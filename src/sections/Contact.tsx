@@ -12,7 +12,7 @@ const contacts = [
 
 export function Contact() {
   return (
-    <Section id="contact" eyebrow="Contact" title="Let's work together">
+    <Section id="contact" title="Contact">
       <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-4">
         {contacts.map(({ label, value, href, Icon, external }) => (
           <a

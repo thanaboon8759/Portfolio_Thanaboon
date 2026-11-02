@@ -11,7 +11,6 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/thanaboon-thongprada-845856384/',
   linkedinHandle: 'thanaboon-thongprada',
   role: 'Computer Science student, Data & AI',
-  roles: ['Computer Science Student', 'Data & AI Student', 'Cybersecurity Student', 'Problem Solver'],
 }
 
 export type Category = 'data' | 'web' | 'security'
@@ -73,8 +72,6 @@ export const skillGroups: { label: string; items: string[] }[] = [
   { label: 'Databases', items: ['PostgreSQL (Supabase)', 'MongoDB', 'MySQL'] },
   { label: 'Tools & Platforms', items: ['Git', 'Kali Linux'] },
 ]
-
-export const softSkills = ['Positive attitude', 'Teamwork', 'Adaptability', 'Time management', 'Problem-solving']
 
 export type TimelineEntry = {
   date: string

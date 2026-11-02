@@ -41,7 +41,7 @@ export function Portfolio() {
   const shown = projects.filter(p => filter === 'all' || p.category === filter)
 
   return (
-    <Section id="portfolio" eyebrow="Portfolio" title="Projects">
+    <Section id="portfolio" title="Projects">
       <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label="Filter projects">
         {filters.map(f => (
           <button

@@ -4,7 +4,7 @@ import { journey } from '@/data'
 
 export function Journey() {
   return (
-    <Section id="journey" eyebrow="Journey" title="Education & experience">
+    <Section id="journey" title="Education & experience">
       <div className="max-w-3xl">
         <Timeline entries={journey} />
       </div>

@@ -9,7 +9,7 @@ const details = [
 
 export function About() {
   return (
-    <Section id="about" eyebrow="About" title="Get to know me">
+    <Section id="about" title="About">
       <div className="grid gap-8 md:grid-cols-[1.4fr_1fr] md:gap-12">
         <div className="space-y-4 text-muted-foreground">
           <p>

@@ -10,7 +10,7 @@ export function Certificates() {
   const [open, setOpen] = useState<Certificate | null>(null)
 
   return (
-    <Section id="certificates" eyebrow="Achievements" title="Certificates">
+    <Section id="certificates" title="Certificates">
       <div className="grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-5">
         {certificates.map(c => (
           <article key={c.image} className={cardClass}>
