@@ -8,7 +8,7 @@ export type NavItem = { id: string; label: string; icon: LucideIcon }
 type Props = { items: NavItem[]; active: string; className?: string }
 
 // Recreated from the 21st.dev "Tubelight Navbar" preview (@ayushmxxn): floating pill,
-// glowing lamp slides to the active item. Text on desktop, icons on phones (pinned to the bottom).
+// a solid lamp bar slides to the active item (its blur glow was removed in the unslop pass). Text on desktop, icons on phones (pinned to the bottom).
 export function TubelightNavbar({ items, active, className }: Props) {
   return (
     <nav
@@ -28,25 +28,20 @@ export function TubelightNavbar({ items, active, className }: Props) {
                 aria-label={label}
                 aria-current={isActive ? 'true' : undefined}
                 className={cn(
-                  'relative flex items-center rounded-full px-3.5 py-2.5 text-sm font-semibold text-foreground/75 no-underline transition-colors hover:text-primary md:px-5 md:py-2',
-                  isActive && 'text-primary',
+                  'relative flex items-center rounded-full px-3.5 py-2.5 text-sm font-medium text-muted-foreground no-underline transition-colors hover:text-foreground md:px-5 md:py-2',
+                  isActive && 'text-foreground',
                 )}
               >
                 <span className="hidden md:inline">{label}</span>
-                <Icon className="size-[18px] md:hidden" strokeWidth={2.5} aria-hidden="true" />
+                <Icon className="size-[18px] md:hidden" strokeWidth={1.5} aria-hidden="true" />
                 {isActive && (
                   <motion.span
                     layoutId="tubelight"
                     className="absolute inset-0 -z-10 rounded-full bg-primary/8"
                     initial={false}
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    {/* The lamp: a bar on top with a soft glow spilling down */}
-                    <span className="absolute -top-2 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-full bg-primary">
-                      <span className="absolute -top-2 -left-2 h-6 w-12 rounded-full bg-primary/20 blur-md" />
-                      <span className="absolute -top-1 h-6 w-8 rounded-full bg-primary/20 blur-md" />
-                      <span className="absolute top-0 left-2 h-4 w-4 rounded-full bg-primary/20 blur-sm" />
-                    </span>
+                    <span className="absolute -top-1 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-[4px] bg-primary" />
                   </motion.span>
                 )}
               </a>

@@ -13,12 +13,12 @@
   --popover-foreground: #1c1d1f;
   --primary: #0f766e;
   --primary-foreground: #ffffff;
-  --secondary: #e6f2f0;
-  --secondary-foreground: #0f766e;
+  --secondary: #efefec;
+  --secondary-foreground: #3f4247;
   --muted: #efefec;
   --muted-foreground: #5b5f66;
-  --accent: #e6f2f0;
-  --accent-foreground: #0f766e;
+  --accent: #efefec;
+  --accent-foreground: #1c1d1f;
   --destructive: #dc2626;
   --border: #e4e4e0;
   --input: #e4e4e0;
@@ -36,12 +36,12 @@
   --popover-foreground: #ececea;
   --primary: #2dd4bf;
   --primary-foreground: #0b1a19;
-  --secondary: #163331;
-  --secondary-foreground: #2dd4bf;
+  --secondary: #232626;
+  --secondary-foreground: #c9ccd0;
   --muted: #202424;
   --muted-foreground: #a3a8ad;
-  --accent: #163331;
-  --accent-foreground: #2dd4bf;
+  --accent: #232626;
+  --accent-foreground: #ececea;
   --destructive: #f87171;
   --border: #2c3030;
   --input: #2c3030;
@@ -51,6 +51,8 @@
 
 @theme inline {
   --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -97,16 +99,16 @@
 
 @layer components {
   .section-title {
-    @apply text-[clamp(1.6rem,3.5vw,2.1rem)] font-bold leading-tight tracking-tight;
+    @apply text-[clamp(1.6rem,3.5vw,2.1rem)] font-medium leading-tight;
   }
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-transparent px-5.5 py-2.5 text-[0.95rem] font-medium no-underline transition-colors;
+    @apply inline-flex h-11 items-center justify-center gap-2 rounded-md border border-transparent px-5 text-[0.95rem] font-medium no-underline transition-colors active:scale-[0.98];
   }
   .btn-primary {
     @apply bg-primary text-primary-foreground hover:opacity-90;
   }
   .btn-secondary {
-    @apply border-border bg-card text-foreground hover:border-primary hover:text-primary;
+    @apply border-border bg-card text-foreground hover:border-foreground/20 hover:bg-muted;
   }
 }
 

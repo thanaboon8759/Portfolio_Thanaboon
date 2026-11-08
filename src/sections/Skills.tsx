@@ -10,7 +10,7 @@ const tiles: BentoTile[] = [
   {
     title: 'Data & AI',
     icon: Brain,
-    description: 'LLM-powered tools, OCR pipelines, vector search and data dashboards.',
+    description: 'LLM tools, OCR pipelines, vector search and data dashboards',
     items: group('Data & AI'),
     highlights: [
       { label: 'Resume AI', detail: 'LLM resume screening', href: 'https://github.com/thanaboon8759/RESUME-AI' },

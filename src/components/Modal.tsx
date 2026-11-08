@@ -32,7 +32,7 @@ export function Modal({ open, onClose, labelledBy, className, children }: Props)
         type="button"
         onClick={onClose}
         aria-label="Close"
-        className="absolute top-2.5 right-2.5 z-10 grid size-10 place-items-center rounded-full border bg-card"
+        className="absolute top-3 right-3 z-10 grid size-10 place-items-center rounded-full border bg-card"
       >
         <X className="size-5" />
       </button>

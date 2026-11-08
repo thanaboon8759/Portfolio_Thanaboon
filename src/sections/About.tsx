@@ -23,15 +23,15 @@ export function About() {
             2025. They're a good way to pick up new tools.
           </p>
         </div>
-        <dl className="grid gap-3.5">
+        <dl className="grid gap-4">
           {details.map(d => (
-            <div key={d.label} className="border-b pb-3.5">
-              <dt className="text-xs tracking-wider text-muted-foreground uppercase">{d.label}</dt>
+            <div key={d.label} className="border-b pb-4">
+              <dt className="text-[13px] text-muted-foreground">{d.label}</dt>
               <dd className="font-medium">{d.value}</dd>
             </div>
           ))}
-          <div className="border-b pb-3.5">
-            <dt className="text-xs tracking-wider text-muted-foreground uppercase">Email</dt>
+          <div className="border-b pb-4">
+            <dt className="text-[13px] text-muted-foreground">Email</dt>
             <dd className="font-medium break-all"><a className="text-primary" href={`mailto:${profile.email}`}>{profile.email}</a></dd>
           </div>
         </dl>

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 
-import { certificates, featured, featuredVisibleFor, filters, journey, profile, projects } from './data.ts'
+import { certificates, featured, featuredPreview, featuredVisibleFor, filters, journey, profile, projects } from './data.ts'
 
 test('project titles are the 7 grid cards in order', () => {
   assert.deepEqual(projects.map(p => p.title), [
@@ -66,4 +66,13 @@ test('no journey entry is still Present', () => {
 
 test('degree ends in 2026', () => {
   assert.equal(journey.find(e => e.title === 'Bachelor of Computer Science')?.date, '2022 – 2026')
+})
+
+test('preview candidates are ranked by score, highest first', () => {
+  const scores = featuredPreview.candidates.map(c => c.score)
+  assert.deepEqual(scores, [...scores].sort((a, b) => b - a))
+})
+
+test('only the top preview candidate is shortlisted', () => {
+  assert.deepEqual(featuredPreview.candidates.map(c => c.decision), ['Shortlisted', 'Undecided', 'Undecided', 'Rejected'])
 })

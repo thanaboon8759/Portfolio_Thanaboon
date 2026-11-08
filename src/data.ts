@@ -71,6 +71,18 @@ export const featured = {
   repo: repo('RESUME-AI'),
 }
 
+// Sample output for the featured preview; the page labels it as example data
+export const featuredPreview = {
+  job: 'Junior Data Analyst',
+  resumes: 24,
+  candidates: [
+    { name: 'Pimchanok S.', score: 92, missing: 'Nothing missing', decision: 'Shortlisted' },
+    { name: 'Daniel K.', score: 84, missing: 'Missing: Power BI', decision: 'Undecided' },
+    { name: 'Napat W.', score: 71, missing: 'Missing: SQL, Power BI', decision: 'Undecided' },
+    { name: 'Sofia R.', score: 58, missing: 'Missing: 1 year of experience', decision: 'Rejected' },
+  ],
+}
+
 export const featuredVisibleFor = (filter: 'all' | Category) => filter === 'all' || filter === 'data'
 
 export type Certificate = { image: string; title: string; shortTitle: string; description: string; width: number; height: number }

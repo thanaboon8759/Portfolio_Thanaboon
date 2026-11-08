@@ -1,4 +1,3 @@
-import { useRef, type PointerEvent } from 'react'
 import type { LucideIcon } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
@@ -13,81 +12,46 @@ export type BentoTile = {
   className?: string
 }
 
-// Recreated from the 21st.dev "Interactive Tech Stack Bento Grid" preview (@themeocean):
-// a glow and border highlight follow the pointer across every tile; icons float on hover.
-// On touch screens there is no hover, so tiles simply render static.
+// Layout recreated from the 21st.dev "Interactive Tech Stack Bento Grid" preview (@themeocean);
+// its pointer-following glow was removed in the unslop pass, so tiles are plain surfaces.
 export function TechStackBento({ tiles }: { tiles: BentoTile[] }) {
-  const gridRef = useRef<HTMLDivElement>(null)
-
-  const onPointerMove = (e: PointerEvent<HTMLDivElement>) => {
-    if (e.pointerType !== 'mouse') return
-    gridRef.current?.querySelectorAll<HTMLElement>('[data-tile]').forEach(tile => {
-      const rect = tile.getBoundingClientRect()
-      tile.style.setProperty('--x', `${e.clientX - rect.left}px`)
-      tile.style.setProperty('--y', `${e.clientY - rect.top}px`)
-    })
-  }
-
   return (
-    <div
-      ref={gridRef}
-      onPointerMove={onPointerMove}
-      className="group/bento grid auto-rows-[minmax(150px,auto)] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
-    >
+    <div className="grid auto-rows-[minmax(152px,auto)] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {tiles.map(({ title, icon: Icon, items, description, highlights, className }) => (
-        <div
-          key={title}
-          data-tile
-          className={cn('group relative overflow-hidden rounded-lg border bg-card p-5.5', className)}
-        >
-          {/* Border highlight: a radial gradient masked to the 1px border */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-300 group-hover/bento:opacity-100"
-            style={{
-              padding: 1,
-              background: 'radial-gradient(260px circle at var(--x, -100px) var(--y, -100px), var(--primary), transparent 70%)',
-              mask: 'linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0)',
-            }}
-          />
-          {/* Soft inner glow */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover/bento:opacity-100"
-            style={{ background: 'radial-gradient(380px circle at var(--x, -100px) var(--y, -100px), color-mix(in srgb, var(--primary) 10%, transparent), transparent 60%)' }}
-          />
-
-          <div className="relative flex h-full flex-col">
-            <span className="grid size-11 place-items-center rounded-xl bg-accent text-primary transition-transform duration-300 group-hover:-translate-y-1">
-              <Icon className="size-5" aria-hidden="true" />
-            </span>
-            <h3 className="mt-4 text-lg font-semibold">{title}</h3>
-            {description && <p className="mt-1 text-sm text-muted-foreground">{description}</p>}
-            {highlights && (
-              <ul className="mt-5 divide-y rounded-lg border bg-background/60">
-                {highlights.map(h => (
+        <div key={title} className={cn('flex flex-col rounded-lg border bg-card p-6', className)}>
+          <span className="grid size-10 place-items-center rounded-md bg-muted text-muted-foreground">
+            <Icon className="size-[18px]" strokeWidth={1.5} aria-hidden="true" />
+          </span>
+          <h3 className="mt-4 text-lg font-medium">{title}</h3>
+          {description && <p className="mt-1 text-sm text-muted-foreground">{description}</p>}
+          {highlights && (
+            <ul className="mt-5 divide-y rounded-md border">
+              {highlights.map(h => {
+                const row = (
+                  <>
+                    <span className="font-medium">{h.label}</span>
+                    <span className="text-right text-[13px] text-muted-foreground">{h.detail}</span>
+                  </>
+                )
+                return (
                   <li key={h.label}>
                     {h.href ? (
-                      <a href={h.href} target="_blank" rel="noopener" className="flex items-baseline justify-between gap-3 px-4 py-3 text-foreground no-underline hover:text-primary">
-                        <span className="font-medium">{h.label}</span>
-                        <span className="text-right text-[0.8rem] text-muted-foreground">{h.detail}</span>
+                      <a href={h.href} target="_blank" rel="noopener" className="flex items-baseline justify-between gap-3 px-4 py-3 text-foreground no-underline transition-colors hover:bg-muted">
+                        {row}
                       </a>
                     ) : (
-                      <div className="flex items-baseline justify-between gap-3 px-4 py-3">
-                        <span className="font-medium">{h.label}</span>
-                        <span className="text-right text-[0.8rem] text-muted-foreground">{h.detail}</span>
-                      </div>
+                      <div className="flex items-baseline justify-between gap-3 px-4 py-3">{row}</div>
                     )}
                   </li>
-                ))}
-              </ul>
-            )}
-            <ul className="mt-auto flex flex-wrap gap-1.5 pt-4">
-              {items.map(item => (
-                <li key={item} className="rounded-full border bg-background px-3 py-1 text-[0.82rem] font-medium">{item}</li>
-              ))}
+                )
+              })}
             </ul>
-          </div>
+          )}
+          <ul className="mt-auto flex flex-wrap gap-1.5 pt-4">
+            {items.map(item => (
+              <li key={item} className="rounded-[6px] border px-2 py-0.5 font-mono text-[12px] text-secondary-foreground">{item}</li>
+            ))}
+          </ul>
         </div>
       ))}
     </div>

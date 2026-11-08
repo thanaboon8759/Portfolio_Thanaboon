@@ -14,7 +14,7 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       <a
         href="#main"
-        className="absolute -top-12 left-4 z-[100] rounded-lg bg-primary px-3.5 py-2 text-primary-foreground focus:top-3"
+        className="absolute -top-12 left-4 z-[100] rounded-md bg-primary px-4 py-2 text-primary-foreground focus:top-3"
       >
         Skip to content
       </a>
