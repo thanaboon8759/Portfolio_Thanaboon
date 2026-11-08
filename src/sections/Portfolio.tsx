@@ -14,7 +14,7 @@ function ProjectCard({ project, onOpenPdf }: { project: Project; onOpenPdf: (p: 
   const Icon = project.icon
   return (
     <article className={cardClass}>
-      <div className={coverClass}><Icon className="size-8" strokeWidth={1.5} aria-hidden="true" /></div>
+      <div className={coverClass}><Icon className="size-6" strokeWidth={1.5} aria-hidden="true" /></div>
       <div className="flex flex-1 flex-col px-5 pt-4 pb-5">
         <h3 className="leading-snug font-medium">{project.title}</h3>
         <p className="mt-1 text-sm text-muted-foreground">{project.subtitle}</p>

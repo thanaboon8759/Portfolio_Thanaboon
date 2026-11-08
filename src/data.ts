@@ -60,7 +60,7 @@ export const projects: Project[] = [
 export const featured = {
   title: 'Resume AI',
   tagline: 'AI resume screening for HR teams',
-  summary: 'A backend that reads uploaded resumes and ranks candidates against a job description, so HR can see who matches and what is missing before deciding.',
+  summary: 'A backend that reads uploaded resumes and ranks candidates against a job description, so HR can see who matches and what is missing before deciding',
   points: [
     'Extracts text from PDF and DOCX resumes with PyMuPDF, python-docx and PaddleOCR',
     'Ranks candidates against the job description and lists missing information',

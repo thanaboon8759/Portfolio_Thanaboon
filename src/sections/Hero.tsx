@@ -11,7 +11,7 @@ export function Hero() {
     <section id="home" className="mx-auto grid w-full max-w-[1080px] items-center gap-8 px-4 pt-10 pb-14 sm:px-6 md:grid-cols-[1.3fr_1fr] md:gap-14 md:pt-28 md:pb-22">
       <div>
         <h1 className="text-[clamp(2.2rem,5vw,3.4rem)] leading-[1.08] font-semibold tracking-tight">{profile.name}</h1>
-        <p className="mt-3 text-xl font-medium text-muted-foreground">{profile.role}</p>
+        <p className="mt-3 text-lg font-medium text-muted-foreground">{profile.role}</p>
         <p className="mt-3 max-w-[52ch] text-muted-foreground">
           I graduated in Computer Science from Bangkok University in 2026, and my main interest is
           data and AI: a resume screening tool built on an LLM, a weather data dashboard, and a
